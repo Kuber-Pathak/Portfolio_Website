@@ -9,10 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@react-email/components": "^1.0.12",
+    "@react-email/components": "^0.0.22",
     "@react-email/font": "^0.0.10",
-    "@react-email/head": "^0.0.13",
-    "@react-email/html": "^0.0.12",
     "@react-email/render": "^2.0.8",
     "next": "^16.2.7",
     "react": "18.3.1",

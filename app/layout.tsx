@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Kuber Pathak — AI Developer and Full-Stack Engineer building scalable, intelligent applications.",
   keywords: ["AI", "Machine Learning", "Next.js", "Full Stack Developer"],
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://www.kuberpathak.com.np"),
   openGraph: {
     title: "Kuber Pathak — AI Developer & Full-Stack Engineer",
     description:
