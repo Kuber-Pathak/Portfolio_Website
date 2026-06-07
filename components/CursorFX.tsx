@@ -1,12 +1,28 @@
 "use client";
+import { useEffect,useState, useRef } from "react";
 
-import { useEffect, useRef } from "react";
+function useHasHover() {
+  const [hasHover, setHasHover] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const update = () => setHasHover(mq.matches);
+    update();
+    mq.addEventListener ? mq.addEventListener("change", update) : mq.addListener(update);
+    return () => {
+      mq.removeEventListener ? mq.removeEventListener("change", update) : mq.removeListener(update);
+    };
+  }, []);
+  return hasHover;
+}
 
 export default function CursorFX() {
   const dotRef = useRef<HTMLDivElement | null>(null);
   const ringRef = useRef<HTMLDivElement | null>(null);
+  const hasHover = useHasHover(); 
 
   useEffect(() => {
+    if (!hasHover) return;
     let dx = 0,
       dy = 0,
       rx = 0,
@@ -48,8 +64,8 @@ export default function CursorFX() {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("mouseover", onOver);
     };
-  }, []);
-
+  }, [hasHover]);
+if (!hasHover) return null;
   return (
     <>
       <div ref={dotRef} className="cursor-dot"></div>
