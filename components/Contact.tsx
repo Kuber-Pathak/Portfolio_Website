@@ -25,7 +25,8 @@ export default function Contact() {
 
   const submit = async(ev: React.FormEvent) => {
     ev.preventDefault();
-    if (validate()) setSent(true);
+    const isValid = validate()
+    if (!isValid) return;
     setLoading(true);
     try {
       const res = await fetch("/api/contact", {
@@ -44,6 +45,12 @@ export default function Contact() {
 
       if (data.success) {
         setSent(true);
+        setForm({
+        name: "",
+        email: "",
+        desc: "",
+      });
+      setErrs({});
       } else {
         alert(data.message || "Failed to send message");
       }

@@ -1803,7 +1803,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; }
   text-transform: uppercase;
 }
 .field .err {
-  position: absolute;
+  /* position: absolute; */
   bottom: -18px;
   font-family: var(--f-mono);
   font-size: 12px;

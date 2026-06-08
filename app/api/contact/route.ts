@@ -27,6 +27,14 @@ export async function POST(request:Request) {
 
     try {
         const {name,email,message}= await request.json()
+        if(!name || !email || !message){
+        return NextResponse.json(
+        {
+            success: false,
+            message: "Empty Fields.",
+        },
+        { status: 405 });
+        }
         const emailResponse = await sendContactEmail(
             name,
             email,
