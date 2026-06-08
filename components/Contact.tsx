@@ -125,7 +125,7 @@ export default function Contact() {
                     <label htmlFor="f-desc">Message</label>
                     {errs.desc && <span className="err">{errs.desc}</span>}
                   </div>
-                  <button className="btn btn-dark" type="submit" style={{ marginTop: 12 }}>{loading ? "Sending..." : `Send Message.`}
+                  <button className="btn btn-dark" type="submit" style={{ marginTop: 12 }}>{loading ? "Sending..." : <>Send Message {I.arrow}</>}
                   </button>
                 </>
               )}
