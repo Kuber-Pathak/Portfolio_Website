@@ -7,8 +7,9 @@ async function sendContactEmail( name: string,
   message: string) {
     try {
         await resend.emails.send({
-            from:"tundead444@gmail.com",
+            from:"contact@kuberpathak.com.np",
             to:"kuberpathak124@gmail.com",
+            replyTo: email,
             subject:`New Contact on portfolio from ${name}`,
             react:ContactEmail({name,email,message}),
         });
