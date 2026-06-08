@@ -47,7 +47,7 @@ export default function Skills() {
   return (
     <section className="section skills">
       <div className="container">
-        <div className="skills-head">
+        <div className="section-head">
           <div>
             <span className="eyebrow">My Skills</span>
             <h2>A toolkit that spans intelligence and interface.</h2>
