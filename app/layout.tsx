@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   keywords: ["AI", "Machine Learning", "Next.js", "Full Stack Developer"],
   metadataBase: new URL("https://www.kuberpathak.com.np"),
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon1.png",
+    shortcut: "/favicon1.png",
+    apple: "/favicon1.png",  
   },
   openGraph: {
     title: "Kuber Pathak — AI Developer & Full-Stack Engineer",

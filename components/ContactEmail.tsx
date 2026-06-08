@@ -33,8 +33,8 @@ export default function ContactEmail({
     year: "numeric",
     hour: "numeric",
     minute: "2-digit",
+    timeZone: "Asia/Kathmandu",
   });
-
   return (
     <Html lang="en">
       <Head>
